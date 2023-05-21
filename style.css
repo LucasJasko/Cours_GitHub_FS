@@ -1,0 +1,249 @@
+@font-face {
+    font-family: Source sans pro;
+    src: url(./assets/fonts/SourceSansPro-Regular.ttf);
+} 
+@font-face {
+    font-family: Source sans li;
+    src: url(./assets/fonts/SourceSansPro-Light.ttf);
+}
+body {
+    font-family: Source sans li;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-family: source sans li;
+    font-weight: 500;
+    font-size: 3rem;
+}
+h2 {
+    font-weight: 100;
+    font-size: 2rem;
+}
+p {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 35px;
+}
+button {
+    font-family: Source sans li;
+    background: none;
+    border: 1px solid rgba(128, 128, 128, 0.44);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.2s;
+    cursor: pointer;
+}
+button:hover {
+    border-color: rgb(0, 136, 255);
+    color: rgb(0, 136, 255);
+}
+/*****************SECTION 1**********************/
+.part-1 {
+    height: 700px;
+    display: flex;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.194);
+}
+.part-1-left {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+.part-1-left-container {
+    margin: 0 5% 5%;
+}
+.part-1-right {
+    background: url(./assets/img/banner.jpg) right/cover;
+    width: 50%;
+    height: 700px;
+}
+/*********************SECTION 2***********************/
+.part-2 {
+    height: 350px;
+    display: flex;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.194);
+}
+.part-2-left {
+    background: url(./assets/img/img-left.jpg) center/cover;
+    width: 30%;
+}
+.part-2-right {
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+.part-2-right-container {
+    margin: 0 5% 5%;
+}
+/**********************SECTION 3************************/
+.part-3 {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.194);
+    height: 350px;
+    display: flex;
+}
+.part-3-left {
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+.part-3-left-container {
+    margin: 0 5% 5%;
+}
+.part-3-right {
+    background: url(./assets/img/img-right.jpg) center/cover;
+    width: 30%;
+}
+/************************SECTION 4**********************/
+.contact-container {
+    position: relative;
+}
+.contact-container h2 {
+    margin-top: 50px;
+    text-align: center;
+}
+.contact {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr 250px 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "name email"
+    "nametext emailtext"
+    "message message"
+    "messagetext messagetext"
+    "btn btn";
+}
+#labelname {
+    grid-area: name;
+}
+#name {
+    text-align: center;
+    height: 30px;
+    grid-area: nametext;
+}
+#labelemail {
+    grid-area: email;
+}
+#email {
+    text-align: center;
+    height: 30px;
+    grid-area: emailtext;
+}
+#labelmessage {
+    grid-area: message;
+}
+#message {
+    grid-area: messagetext;
+}
+.contact label {
+    margin: auto;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+/* POUR POINTER TT LES INPUT DE TEXTE: input[type="text"] */
+input[type="text"],
+textarea {
+    font-family: Source sans li;
+    background: none;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+    resize: none;
+}
+input[type="text"]:hover,
+textarea:hover {
+    border-color: rgb(0, 136, 255);
+}
+input[type="text"]:focus,
+textarea:focus {
+    border-color: rgb(0, 136, 255);
+}
+.submit-btn {
+    grid-area: btn;
+}
+.submit-btn input {
+    border: 1px solid rgba(128, 128, 128, 0.44);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-family: Source sans li;
+    background: none;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.contact-container:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.44);
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    bottom: -40px;
+}
+/*************************SECTION 5*********************/
+.social-media {
+    margin: 100px auto 50px;
+    display: flex;
+    justify-content: center;
+}
+.social-media ul {
+    list-style: none;
+    width: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social-media button {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+}
+/* ******************MEDIA QUERIES********************** */
+@media screen and (max-width: 510px) {
+    .part-1 {
+        display: block;
+    }
+    .part-1-left {
+        width: 100%;
+        text-align: left;
+        margin: 0 0 40px;
+    }
+    .part-1-right {
+        background: cover;
+        width: 100%;
+        height: 400px;
+    }
+    .part-2-left {
+        display: none;
+    }
+    .part-2-right {
+        width: 100%;
+    }
+    .part-3-right {
+        display: none;
+    }
+    .part-3-left {
+        width: 100%;
+    }
+    .contact {
+        width: 80%;
+    }
+    .social-media ul {
+        width: 80%;
+    }
+}
